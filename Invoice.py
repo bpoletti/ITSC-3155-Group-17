@@ -1,4 +1,5 @@
 class Invoice:
+
     def __init__(self):
         self.items = {}
 
@@ -23,7 +24,7 @@ class Invoice:
         self.total_discount = total_discount
         return total_discount
 
-    def totalPurePrice(self, products):
+    def totalPurPrice(self, products):
         total_pure_price = self.totalImpurePrice(products) - self.totalDiscount(products)
         return total_pure_price
 
