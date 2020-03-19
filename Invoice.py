@@ -44,3 +44,6 @@ class Invoice:
                 continue
             else:
                 return userInput
+
+    def addPrice(x, y):
+        return x + y

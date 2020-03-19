@@ -15,10 +15,10 @@ def invoice():
     return invoice
 
 
-@pytest.fixture()
-def input_value():
-    input_value = {'y', 'n'}
-    return input_value
+# @pytest.fixture()
+# def input_value():
+#   input_value = {'y', 'n'}
+#  return input_value
 
 
 def test_CanCalculateTotalImpurePrice(products):
@@ -37,6 +37,9 @@ def test_CanCalculateTotalPurePrice(invoice, products):
     assert invoice.totalPurPrice(products) == 69.38
 
 
-def test_inputAnswer(invoice, input_value):
-    invoice.inputAnswer(input_value)
-    assert invoice.inputAnswer(input_value) == 'y'
+def test_canAddPrice():
+    assert Invoice.addPrice(1, 2) == 3
+
+# def test_CanInputNumber(invoice):
+#   val = invoice.inputNumber(input_value=5)
+#  assert not val
